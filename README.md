@@ -2,6 +2,8 @@
 
 App di ripasso per il corso **Soccorritore Esecutore 118**: teoria divisa per argomenti, flash card per gli scenari critici, test per argomento e una simulazione d'esame. Funziona offline e si installa sul telefono come un'app.
 
+**👉 [Apri l'app](https://davideparisimodena.github.io/118/)**
+
 > ⚠️ **Materiale non ufficiale.** È uno strumento di studio personale: non è un documento AREU, non rilascia certificazioni e non sostituisce il corso, le esercitazioni pratiche né le indicazioni degli istruttori del tuo ente di formazione.
 
 ![Schermata dell'app](docs/screenshot.png)
@@ -16,15 +18,9 @@ App di ripasso per il corso **Soccorritore Esecutore 118**: teoria divisa per ar
 
 ## Usarla
 
-Apri il link dell'app dal telefono con Chrome o Safari e scegli **Aggiungi a schermata Home**. Dopo il primo caricamento funziona anche senza connessione.
+Apri [davideparisimodena.github.io/118](https://davideparisimodena.github.io/118/) dal telefono con Chrome o Safari e scegli **Aggiungi a schermata Home**. Dopo il primo caricamento funziona anche senza connessione.
 
-Link: `https://davideparisimodena.github.io/118/` (attivo dopo aver abilitato GitHub Pages, vedi sotto).
-
-### Pubblicarla con GitHub Pages
-
-1. Nel repository vai su **Settings → Pages**.
-2. In *Source* scegli **Deploy from a branch**, branch `main`, cartella `/ (root)`, poi **Save**.
-3. Dopo un paio di minuti l'app è online all'indirizzo indicato nella stessa pagina.
+L'app è pubblicata con GitHub Pages dal branch `main`: ogni modifica unita a `main` va online da sola in un paio di minuti.
 
 ### Provarla in locale
 
