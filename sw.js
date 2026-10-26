@@ -1,6 +1,11 @@
-const CACHE_NAME = "soccorritore118-cache-v1";
+// La versione arriva da version.js: cambiandola lì cambia anche il nome della cache.
+importScripts("version.js");
+
+const CACHE_NAME = "soccorritore118-cache-v" + self.APP_VERSION;
 const ASSETS = [
   "./index.html",
+  "./content.js",
+  "./version.js",
   "./manifest.json",
   "./icon-192.png",
   "./icon-512.png"
@@ -32,9 +37,10 @@ self.addEventListener("fetch", (event) => {
     caches.match(event.request).then((cached) => {
       const fetchPromise = fetch(event.request)
         .then((networkResponse) => {
-          caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, networkResponse.clone());
-          });
+          if (networkResponse && (networkResponse.ok || networkResponse.type === "opaque")) {
+            const copy = networkResponse.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
+          }
           return networkResponse;
         })
         .catch(() => cached);
